@@ -1,31 +1,55 @@
-# Create React App
+<h1 align="center">
+  <img src="public/logo192.png" alt="Logo" width="25" height="25"> Weatherly
+</h1>
+<p align="center">
+  <img alt="react" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img alt="tailwind" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img alt="javascript" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+  <img alt="github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  <img alt="vercel" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</p>
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+## About The Project
 
-## Deploy Your Own
+This repository contains basic weather application that was created with React, Tailwind, OpenWeatherMap API and GoogleMaps API.
 
-Deploy your own Create React App project with Vercel.
+The following functional features have been implemented,
+- Show weather data using OpenWeatherMap API 
+- Use google maps to show the location
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+## Built Using
 
-_Live Example: https://create-react-template.vercel.app/_
+- [React](https://reactjs.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [OpenWeatherMap API](https://openweathermap.org/)
+- [Google Maps API](https://github.com/fullstackreact/google-maps-react)
+- [Vercel](https://vercel.com)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Installation & Set Up
 
-### `npm start`
+1. Clone repository
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```sh
+   git clone https://github.com/lestercardoz11/weatherly.git
+   ```
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+2. Change the current working directory
 
-### `npm test`
+   ```sh
+   cd dash
+   ```
 
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Install dependencies
 
-### `npm run build`
+   ```sh
+   yarn
+   ```
+   
+4. Start the development server
 
-Builds the app for production to the `build` folder.
-
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+   ```sh
+   yarn run start
+   ```
+   
+<p align="right">(<a href="#top">back to top</a>)</p>
