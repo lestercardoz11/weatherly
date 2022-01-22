@@ -12,8 +12,12 @@ const Weather = ({ data }) => {
     Object.keys(data).length !== 0 &&
     Object.getPrototypeOf(data) === Object.prototype && (
       <div className='w-full max-w-xs flex flex-col bg-white rounded-lg border-2 border-gray-300 p-4'>
-        <div className='font-bold text-xl'>{data.city}</div>
-        <div className='text-sm text-gray-500'>{today}</div>
+        <div id='city' className='font-bold text-xl'>
+          {data.city}
+        </div>
+        <div id='date' className='text-sm text-gray-500'>
+          {today}
+        </div>
         <div className='mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24'>
           <img
             src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}

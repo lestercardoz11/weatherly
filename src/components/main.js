@@ -18,48 +18,60 @@ const Main = () => {
         setLatitude(lat);
         setLongitude(lng);
 
-        axios
-          .get(process.env.REACT_APP_OPEN_WEATHER_API_URL, {
-            params: {
-              lat: lat,
-              lon: lng,
-              units: 'metric',
-              appid: process.env.REACT_APP_OPEN_WEATHER_API_KEY,
-            },
-          })
-          .then((res) => {
-            if (res.status === 200) {
-              const dataset = res.data;
-              const data = {
-                city: dataset?.name,
-                temperature: dataset?.main?.temp,
-                min_temp: dataset?.main?.temp_min,
-                max_temp: dataset?.main?.temp_max,
-                humidity: dataset?.main?.humidity,
-                visibility: dataset?.visibility / 1000,
-                weather: dataset?.weather[0]?.main,
-                wind: dataset?.wind?.speed,
-                icon: dataset?.weather[0]?.icon,
-              };
-              setWeatherData(data);
-            }
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        fetchData(lat, lng);
       });
+    } else {
+      const lat = 19.0;
+      const lng = 72.8;
+
+      setLatitude(lat);
+      setLongitude(lng);
+
+      fetchData(lat, lng);
     }
   }, []);
+
+  const fetchData = (lat, lng) => {
+    axios
+      .get(process.env.REACT_APP_OPEN_WEATHER_API_URL, {
+        params: {
+          lat: lat,
+          lon: lng,
+          units: 'metric',
+          appid: process.env.REACT_APP_OPEN_WEATHER_API_KEY,
+        },
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          const dataset = res.data;
+          const data = {
+            city: dataset?.name,
+            temperature: dataset?.main?.temp,
+            min_temp: dataset?.main?.temp_min,
+            max_temp: dataset?.main?.temp_max,
+            humidity: dataset?.main?.humidity,
+            visibility: dataset?.visibility / 1000,
+            weather: dataset?.weather[0]?.main,
+            wind: dataset?.wind?.speed,
+            icon: dataset?.weather[0]?.icon,
+          };
+          setWeatherData(data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <>
       {latitude !== 0 && longitude !== 0 ? (
         <main className='h-screen p-8 bg-gray-900'>
-          <section class='flex px-4 items-center text-white space-x-2'>
+          <section className='flex px-4 items-center text-white space-x-2'>
             <img src='/logo192.png' className='h-7 w-7' alt='weather-icon' />
             <p
               id='header'
-              class='text-xl leading-8 font-extrabold tracking-wider text-gray-200'>
+              className='text-xl leading-8 font-extrabold tracking-wider text-gray-200'>
               WEATHERLY
             </p>
           </section>
