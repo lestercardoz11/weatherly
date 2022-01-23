@@ -15,7 +15,8 @@
 This repository contains basic weather application that was created with React, Tailwind, OpenWeatherMap API and GoogleMaps API.
 
 The following functional features have been implemented,
-- Show weather data using OpenWeatherMap API 
+
+- Show weather data using OpenWeatherMap API
 - Use google maps to show the location
 
 ## Built Using
@@ -25,7 +26,6 @@ The following functional features have been implemented,
 - [OpenWeatherMap API](https://openweathermap.org/)
 - [Google Maps API](https://github.com/fullstackreact/google-maps-react)
 - [Vercel](https://vercel.com)
-
 
 ## Installation & Set Up
 
@@ -41,16 +41,22 @@ The following functional features have been implemented,
    cd weatherly
    ```
 
-3. Install dependencies
+3. Copy env file
+
+   ```sh
+   cp .env.example .env
+   ```
+
+4. Install dependencies
 
    ```sh
    yarn
    ```
-   
-4. Start the development server
+
+5. Start the development server
 
    ```sh
    yarn run start
    ```
-   
+
 <p align="right">(<a href="#top">back to top</a>)</p>
